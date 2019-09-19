@@ -16,13 +16,13 @@ const MapWrapper = props => {
     if (props.movie) {
       fetch(`/api/locations?title=${props.movie}`)
         .then(r => r.json())
-        .then(data => {
-          const locations = data.locations.join(";");
+        .then(locationsResponse => {
+          const locations = locationsResponse.locations.join(";");
           fetch(`/api/geocoding?locations=${locations}`)
             .then(r => r.json())
-            .then(data => setMarkers(data));
+            .then(geoResponse => setMarkers(geoResponse));
 
-          setMovie(data.movie);
+          setMovie(locationsResponse.movie);
         });
     }
   }, [props.movie]);

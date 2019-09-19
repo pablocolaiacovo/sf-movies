@@ -23,6 +23,8 @@ module.exports = async (req, res) => {
   });
 
   const results = await Promise.all(promises);
-  const coordinates = results.map(r => r.features[0].geometry);
+  const coordinates = results
+    .filter(r => r.features)
+    .map(r => r.features[0].geometry);
   res.status(200).send(coordinates);
 };
