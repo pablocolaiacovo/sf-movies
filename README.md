@@ -1,4 +1,4 @@
-[https://sf-movies.pablocolaiacovo.now.sh/](SF Movies App)
+[SF Movies App](https://sf-movies.pablocolaiacovo.now.sh/)
 
 ## Available Scripts
 
