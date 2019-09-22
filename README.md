@@ -1,8 +1,16 @@
-[SF Movies App](https://sf-movies.pablocolaiacovo.now.sh/)
+## Dependencies
+
+1. node
+2. [now-cli](https://github.com/zeit/now)
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `now dev`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm start`
 
